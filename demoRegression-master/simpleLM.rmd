@@ -52,4 +52,13 @@ abline(myheadWTH)
 summary.lm(myheadWTH)
 ```
 
-Inputed a new model, myheadWTH which doesn't give us a better model to look at since the residual standard error went up and the adjusted R-square went down. 
+Inputted a new model, myheadWTH which doesn't give us a better model to look at since the residual standard error went up and the adjusted R-square went down. 
+
+```{r}
+myheadLEN <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(myheadLEN)
+summary.lm(myheadLEN)
+```
+
+Inputted a new model, myheadLEN which seems to be a the best model to use compared to the other models. The residual standard error is 4.235 and the adjusted r-square is 0.8434.
