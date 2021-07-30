@@ -43,6 +43,13 @@ abline(mychest)
 summary.lm(mychest)
 ```
 
-I have two models and in mychest model I used chest to get the length of the bear whereas the first model, simp used the neck to get the length. In mychest model the adjusted r square is 0.7869 and the residual standard error is 4.939. In the simp model the adjusted r squared was 0.7476 and the residual standard error was 5.376. Therefore it appears using the model mychest is a better model to use becuase it explains more of the error and its residual standard error is smaller. 
+I have two models and in mychest model I used chest to get the length of the bear whereas the first model, simp used the neck to get the length. In mychest model the adjusted r square is 0.7869 and the residual standard error is 4.939. In the simp model the adjusted r squared was 0.7476 and the residual standard error was 5.376. Therefore it appears using the model mychest is a better model to use because it explains more of the error and its residual standard error is smaller. 
 
+```{r}
+myheadWTH <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(myheadWTH)
+summary.lm(myheadWTH)
+```
 
+Inputed a new model, myheadWTH which doesn't give us a better model to look at since the residual standard error went up and the adjusted R-square went down. 
